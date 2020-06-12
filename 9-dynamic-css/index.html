@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h3>Dynamic CSS</h3>
+      <p @click="available = !available">example 1</p>
+      <div v-bind:class="{available:available}">
+        <span>Florin</span>
+      </div>
+      <p>example 2</p>
+      <button @click="nearby = !nearby">toggle nearby</button>
+      <button @click="available = !available">toggle available</button>
+      <div :class="compClasses">
+        <span>asdadasd</span>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

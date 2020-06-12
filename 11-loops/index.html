@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h3>Looping trough list</h3>
+      <ul>
+        <li v-for="(character, index) in characters" :key="index">
+          {{ character }} - {{ index }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="ninja in ninjas" :key="ninja.id">{{ ninja.name }}</li>
+      </ul>
+      <template v-for="ninja in ninjas">
+        <h3>{{ ninja.id }}</h3>
+        <p>{{ ninja.name }}</p>
+      </template>
+      <template v-for="ninja in ninjas">
+        <div v-for="(val,key) in ninja">
+          <p>
+            {{ val }} - {{ key }}
+          </p>
+        </div>
+      </template>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
